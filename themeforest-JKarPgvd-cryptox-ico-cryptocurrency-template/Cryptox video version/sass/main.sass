@@ -1,0 +1,1866 @@
+// preloader
+.preloader
+	height: 100%
+	width: 100%
+	background: #050017
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 9000
+	perspective: 1600px
+	perspective-origin: 20% 50%
+	transition: 0.5s all
+	opacity: 1
+	img
+		display: block
+		top: 50%
+		left: 50%
+		position: relative
+		transform: translate(-50%, -50%)
+
+.spinner
+	width: 80px
+	height: 80px
+	border: 2px solid #f3f3f3
+	border-top: 3px solid #0088cf
+	border-radius: 100%
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	animation: spin 1s infinite linear
+
+.preloader.fade
+	opacity: 0
+
+.b-ico-preloader
+	background: url(http://weblaboratory.in.ua/wp-content/themes/graphy/images/new_logo.svg)
+	background-size: cover
+	width: 52px
+	height: 67px
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	animation: ico 5s infinite linear
+	transform-style: preserve-3d
+
+@keyframes spin
+	from
+		transform: rotate(0deg)
+
+	to
+		transform: rotate(360deg)
+
+@keyframes ico
+	from
+		transform: rotateY(0deg)
+
+	to
+		transform: rotateY(360deg)
+
+.pulse
+	display: block
+	width: 22px
+	height: 22px
+	border-radius: 50%
+	cursor: pointer
+	box-shadow: 0 0 0 rgba(189, 42, 9, 0.4)
+	animation: pulse 1.5s infinite
+	position: fixed
+	top: 50%
+	left: 50%
+	margin: auto
+	margin-top: -11px
+	margin-left: -11px
+	z-index: 10000
+
+@-webkit-keyframes pulse
+	0%
+		-webkit-box-shadow: 0 0 0 0 rgba(189, 42, 9, 0.4)
+
+	70%
+		-webkit-box-shadow: 0 0 0 10px rgba(189, 42, 9, 0)
+
+	100%
+		-webkit-box-shadow: 0 0 0 0 rgba(189, 42, 9, 0)
+
+@keyframes pulse
+	0%
+		-moz-box-shadow: 0 0 0 0 rgba(189, 42, 9, 0.4)
+		box-shadow: 0 0 0 0 rgba(189, 42, 9, 0.4)
+
+	70%
+		-moz-box-shadow: 0 0 0 10px rgba(189, 42, 9, 0)
+		box-shadow: 0 0 0 10px rgba(189, 42, 9, 0)
+
+	100%
+		-moz-box-shadow: 0 0 0 0 rgba(189, 42, 9, 0)
+		box-shadow: 0 0 0 0 rgba(189, 42, 9, 0)
+
+
+
+@import "vars"
+@import "fonts"
+@import "libs"
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700')
+
+$default-font: 'Poppins', sans-serif
+
+a:hover
+	text-decoration: none
+
+::placeholder
+	color: #666
+
+::selection
+	//background-color: $accent
+	//color: #fff
+
+=transition($time)
+	-webkit-transition: all $time ease-in-out
+	-moz-transition: all $time ease-in-out
+	-o-transition: all $time ease-in-out
+	transition: all $time ease-in-out
+
+.flex
+	display: flex
+
+hr
+	position: relative
+	width: 100%
+
+.platform-header .bottom-panel
+	position: relative
+
+.bottom-panel
+	background: #fff
+	position: fixed
+	bottom: 0
+	left: 0
+	width: 50%
+	z-index: 900
+
+	h4
+		font-family: $default-font
+		font-size: 14px
+		font-weight: 500
+		color: #07072E
+		margin-bottom: 2px
+	span
+		font-family: $default-font
+		font-size: 11px
+		font-weight: 500
+		color: #CDCCD3
+	.icon-wrapper
+		padding: 20px 0
+		position: relative
+		width: 675px
+		margin-left: auto
+	.icon-container
+		display: flex
+		margin: auto
+		justify-content: center
+		align-items: center
+		position: absolute
+		background: #EDEDED
+		width: 94px
+		height: 94px
+		right: 0
+		top: 0
+	span.icon
+		font-family: 'themify'
+		font-size: 25px
+		color: #838091
+		cursor: pointer
+		position: relative
+		top: -5px
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.2
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+b, strong
+	font-weight: bold
+
+.space-left
+	padding-left: 0
+
+
+/* === main === */
+.main
+	position: relative
+	//min-height: 900px
+	height: 100vh
+	video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	.menu
+		z-index: 99
+		padding: 30px 0
+
+		ul
+			display: flex
+			justify-content: space-around
+			padding: 0
+			margin-bottom: 0
+
+			a
+				color: #fff
+				font-size: 14px
+				font-weight: normal
+
+	
+
+.menu-right
+	.number, .name
+		font-family: $default-font
+		color: #fff
+		font-size: 14px
+		font-weight: 400
+
+	.horizontal-separator
+		border-bottom: 1px solid #fff
+		display: inline-block
+		width: 40px
+		margin: 0 22px
+		position: relative
+		top: -4px
+
+	a
+		color: #fff
+
+.menu .underlineEffect a:after
+	background-color: #fff
+
+/* === menu === */
+.menu ul li
+	float: left
+	list-style: none
+
+
+
+.section-separator hr
+	margin: 0
+	border-color: #838091
+	
+/* === menu === */
+.header
+	width: 100%
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+	.pagination-block
+		margin-top: 50px
+
+	h1
+		font-family: $default-font
+		color: #fff
+		font-weight: 600
+		font-size: 42px
+		margin-top: 50px
+		margin-bottom: 30px
+		line-height: 1.4
+
+	h2
+		font-family: $default-font
+		color: #fff
+		font-weight: 500
+		font-size: 18px
+		line-height: 1.4
+
+	.community
+		color: rgba(255,255,255, 0.5)
+		font-weight: normal
+		font-size: 14px
+		margin: 100px 0 0 0
+
+	.pagination-block .number, .pagination-block .name
+		font-size: 14px
+
+	.horizontal-separator
+		max-width: 50px
+
+	.socials
+		svg
+			fill: #fff
+			opacity: 0.5
+			width: 22px
+			height: 22px
+			+transition(0.3s)
+
+			&:hover
+				opacity: 1
+				+transition(0.3s)
+
+
+.ico-info
+	background: #050017
+	padding: 55px 35px
+	width: 90%
+	margin-left: auto
+
+	h2
+		font-size: 20px
+		font-weight: 500
+		text-align: center
+		margin-bottom: 25px
+
+	hr
+		width: 98%
+		border-color: rgba(255,255,255, 0.4)
+		margin: 25px auto 30px auto
+
+.timer
+	text-align: center
+
+	.smalltext
+		font-family: 'Poppins', sans-serif
+		font-size: 12px
+		font-weight: normal
+		color: rgba(255,255,255, 0.5)
+		padding-top: 0
+
+	.days, .hours, .minutes, .seconds
+		font-family: 'Poppins', sans-serif
+		font-size: 42px
+		font-weight: 500
+		color: #fff
+		margin: 0 2px
+	.days
+		margin: 0 2px 0 0
+	.seconds
+		margin: 0 0 0 2px
+
+	.days-container
+		.smalltext
+			padding-right: 2px
+	.seconds-container
+		.smalltext
+			padding-left: 2px
+
+#clockdiv
+	font-family: sans-serif
+	color: #fff
+	display: inline-block
+	font-weight: 100
+	text-align: center
+	font-size: 30px
+	display: flex
+	justify-content: space-evenly
+
+#clockdiv > div
+	border-radius: 3px
+	display: inline-block
+
+#clockdiv div > span
+	border-radius: 3px
+	display: inline-block
+
+.smalltext
+	padding-top: 5px
+	font-size: 16px
+
+
+.ico-data
+	text-align: center
+	width: 85%
+	margin: 0 auto
+
+	.data-wrapper
+		overflow: hidden
+
+	.ico-data-left
+		float: left
+	.ico-data-right
+		float: right
+	.number
+		font-family: $default-font
+		color: #fff
+		font-size: 20px
+		font-weight: 500
+
+
+	.text
+		color: #838091
+		font-size: 12px
+		font-weight: normal
+		margin: 5px 0 0 0
+
+	.nectar-button
+		margin: 30px 0 25px 0
+		line-height: 1
+		span
+			font-weight: 500
+
+
+	.meth-img
+		margin: 15px 0
+
+.payment
+	text-align: center
+	.payment-meth
+		span
+			color: #fff
+			font-size: 12px
+			font-weight: normal
+			display: inline-block
+			margin: 0 1%
+			width: 45.8%
+
+
+	.payment-meth:before
+		content: ''
+		display: inline-block
+		background: rgba(255,255,255,0.4)
+		border-bottom: 1px solid rgba(255,255,255,0.4)
+		width: 24%
+		position: relative
+		top: -4px
+
+	.payment-meth:after
+		content: ''
+		display: inline-block
+		background: rgba(255,255,255,0.4)
+		border-bottom: 1px solid rgba(255,255,255,0.4)
+		width: 24%
+		position: relative
+		top: -4px
+
+	.meth-img
+		margin: 10px 0 0 0
+
+
+.sale-status
+	margin: 50px 0 40px 0
+	position: relative
+
+	.status-line
+		width: 100%
+		height: 8px
+		background: #fff
+
+	.status-progress
+		position: absolute
+		top: 0
+		left: 0
+		display: inline-block
+		background: red
+		width: 35%
+		height: 8px
+
+	.status-separator-left
+		width: 1px
+		height: 27px
+		background: #fff
+		margin-top: 20px
+		margin-bottom: 20px
+		position: absolute
+		top: -28px
+		left: 15%
+
+		.price
+			color: #fff
+			font-size: 12px
+			font-weight: normal
+			position: absolute
+			top: -20px
+
+		.name
+			color: #fff
+			font-size: 12px
+			font-weight: normal
+			position: absolute
+			bottom: -22px
+			width: 100px
+			text-align: left
+
+
+
+	.status-separator-right
+		width: 1px
+		height: 27px
+		background: #fff
+		margin-top: 20px
+		margin-bottom: 20px
+		position: absolute
+		top: -28px
+		right: 4%
+
+		.price
+			color: #fff
+			font-size: 12px
+			font-weight: normal
+			position: absolute
+			top: -20px
+			right: 0
+
+		.name
+			color: #fff
+			font-size: 12px
+			font-weight: normal
+			position: absolute
+			bottom: -22px
+			right: 0
+			width: 100px
+			text-align: right
+
+.platform-header
+	width: 100%
+	position: absolute
+	bottom: 0
+	padding: 0
+	z-index: 80
+
+	.bottom-panel span.icon
+		top: 0
+
+.platform-header .bottom-panel .icon-container
+	width: 77px
+	height: 77px
+
+.info-block
+	overflow: hidden
+	z-index: 99
+	position: relative
+	background: #fff
+
+	.pagination-block
+		margin-top: 60px
+		display: flex
+		align-items: center
+
+.info-block-left
+	background: #fff
+	width: 50%
+	float: left
+	display: flex
+	align-items: center
+	justify-content: center
+
+	h3
+		font-size: 38px
+		font-family: 'Poppins', sans-serif
+		font-weight: 500
+		line-height: 1.4
+		margin: 75px 0 30px 0
+
+	p
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+		line-height: 21px
+		width: 90%
+
+.info-block-right
+	background-color: #050017
+	width: 50%
+	float: left
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-top: 30px
+
+.presentation
+	margin-top: 60px
+
+	a
+		font-size: 16px
+		font-family: 'Poppins', sans-serif
+		font-weight: 500
+		color: rgba(0, 0, 0, 0.5)
+		+transition(0.3s)
+
+		&:hover
+			color: rgba(0, 0, 0, 1)
+			+transition(0.3s)
+
+	img
+		margin-right: 18px
+
+.benefit
+	background-color: #050017
+
+
+.pagination-block
+	color: #07072E
+	display: flex
+	align-items: center
+
+	.number
+		font-family: 'Poppins', sans-serif
+		font-size: 16px
+		font-weight: 500
+
+	.horizontal-separator
+		display: inline-block
+		border-bottom: 1px solid #07072E
+		width: 70px
+		margin: 0 20px
+
+	.name
+		font-family: 'Poppins', sans-serif
+		font-size: 16px
+		font-weight: 500
+
+
+.info-right
+	p
+		width: 70%
+
+	hr
+		margin: 40px 0 15px 0
+		height: 1px
+		width: 90%
+		display: block
+		background: #CDCCD3
+		border: none
+
+	.learn-more
+		font-family: 'Poppins', sans-serif
+		font-size: 14px
+		font-weight: 500
+		color: #07072E
+		margin: 0 0 0 15px
+		padding: 70px 0 0 0
+
+		svg
+			width: 15px
+			margin-left: 20px
+			position: relative
+			top: 3px
+			+transition(0.3s)
+
+	.learn-more:hover
+		svg
+			margin-left: 30px
+			+transition(0.3s)
+
+.stats
+	.item-name
+		font-size: 14px
+		color: #838091
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+		margin: 0 0 15px 0
+
+	.item-text
+		font-size: 16px
+		color: #0C0123
+		font-family: 'Poppins', sans-serif
+		font-weight: 500
+		margin: 0 0 15px 0
+
+.benefit-item
+	position: relative
+
+.benefit-space
+	padding-bottom: 110px
+
+.benefit
+	padding-top: 195px
+	padding-bottom: 70px
+
+	.tabs a
+		border: none
+
+	.tabs a:after, .tabs-faq a:after, .tabs-sale a:after
+		bottom: -3px
+		height: 1px
+
+	.pagination-block
+		color: #fff
+		display: flex
+		align-items: center
+
+	.horizontal-separator
+		border-bottom: 1px solid #fff
+
+	h2
+		font-family: 'Poppins', sans-serif
+		color: #fff
+		font-size: 38px
+		font-weight: 500
+		line-height: 1.4
+
+.benefit-row
+	margin-top: 80px
+	margin-bottom: 130px
+
+.benefit-img
+	height: 100%
+	position: absolute
+	display: flex
+	width: 20%
+	top: 0
+	right: 0
+	margin: auto
+
+/* === tabs === */
+.tab
+	display: inline-block
+	padding: .5em
+	vertical-align: top
+	cursor: pointer
+	text-decoration: none
+	color: #838091
+	font-family: 'Poppins', sans-serif
+	font-size: 16px
+	font-weight: 500
+	padding: 0.1em 0
+
+
+.tabs
+	padding-top: 25px
+	a
+		margin: 0 30px
+
+	a:first-child
+		margin: 0 30px 0 0
+
+.tab:hover
+	color: #838091
+
+.tab.active
+	color: #fff
+	border-bottom: 1px solid #fff
+	cursor: pointer
+	padding-left: 0
+
+.panel
+	display: none
+
+.panel.active
+	display: block
+
+.panel
+	h5
+		font-family: 'Poppins', sans-serif
+		color: #fff
+		font-size: 20px
+		font-weight: 400
+		//width: 50%
+		display: inline-block
+		line-height: 1.4
+		margin: 0
+
+	img
+		display: inline-block
+		//vertical-align: baseline
+		//margin-left: 60px
+		//max-height: 32px
+		float: right
+
+	p
+		font-family: 'Poppins', sans-serif
+		color: #838091
+		font-size: 14px
+		font-weight: 400
+		margin: 25px 0 0 0
+		line-height: 24px
+		width: 90%
+
+	.row
+		padding-bottom: 110px
+
+/* === sale === */
+.sale
+	background: #070023
+	padding: 150px 0 205px 0
+
+	.nectar-button
+		margin: 50px 0 0 0
+
+.sale-row
+	margin-top: 75px
+	h2
+		font-family: 'Poppins', sans-serif
+		font-size: 38px
+		color: #fff
+		line-height: 1.2
+		font-weight: 500
+
+.tab-sale
+	display: inline-block
+	padding: .5em
+	vertical-align: top
+	cursor: pointer
+	text-decoration: none
+	color: #838091
+	font-family: 'Poppins', sans-serif
+	font-size: 16px
+	font-weight: 500
+	padding: 0.1em 0
+
+.tabs-sale
+	padding: 18px 0 0 0
+	a
+		margin: 0 74px 0 0
+
+.tab-sale:hover
+	color: #838091
+
+.tab-sale.active
+	color: #fff
+	//border-bottom: 1px solid #fff
+	cursor: default
+	padding-left: 0
+
+.panel-sale
+	display: none
+	margin: 92px 0 0 0
+
+.panel-sale.active
+	display: block
+
+.sale-item
+	margin: 25px 0
+	.name
+		font-family: 'Poppins', sans-serif
+		font-size: 20px
+		font-weight: 400
+		color: #fff
+	.content
+		font-family: 'Poppins', sans-serif
+		font-size: 16px
+		font-weight: 400
+		color: #838091
+		margin: 15px 0 0 0
+
+.circle
+	display: inline-block
+	width: 21px
+	height: 21px
+	border-radius: 50%
+
+.circle.white
+		background: #fff
+.circle.red
+		background: #F20127
+
+.bonus-status
+	margin: 100px 0 0 0
+
+.bonus-percent
+	font-family: 'Poppins', sans-serif
+	font-size: 22px
+	font-weight: 400
+	color: #fff
+	margin: 25px 0 0 0
+
+.bonus-day
+	font-family: 'Poppins', sans-serif
+	font-size: 16px
+	font-weight: 400
+	color: #838091
+	margin: 10px 0 0 0
+
+.nectar-button
+	margin: 30px 0 0 0
+	padding: 13px 33px
+	visibility: visible
+	color: rgb(255, 255, 255)
+	background-color: transparent
+	border: 2px solid #F20127
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(242,1,39,1)
+	-moz-box-shadow: 0px 0px 13px 0px rgba(242,1,39,1)
+	box-shadow: 0px 0px 13px 0px rgba(242,1,39,1)
+	border-radius: 35px
+	cursor: pointer
+	display: inline-block
+	transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+	-moz-transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+	-webkit-transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+	-o-transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+
+
+.nectar-button:hover
+	background: #F20127
+	box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16)!important
+	transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+	-moz-transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+	-webkit-transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+	-o-transition: all .45s cubic-bezier(0.25,1,0.33,1)!important
+
+.nectar-button span
+	left: 0px
+	display: inline-block
+	-webkit-transform: translateX(0)
+	transform: translateX(0)
+	transition: opacity .45s cubic-bezier(0.25,1,0.33,1),transform .45s cubic-bezier(0.25,1,0.33,1)
+	-webkit-transition: opacity .45s cubic-bezier(0.25,1,0.33,1),-webkit-transform .45s cubic-bezier(0.25,1,0.33,1)
+	position: relative
+	font-family: 'Poppins', sans-serif
+	font-size: 14px
+	font-weight: 400
+	color: #fff
+
+/* == all styles == */
+.pagination-block.white-pagination
+	color: #fff
+	display: flex
+	align-items: center
+
+	.number
+		color: #fff
+
+	.horizontal-separator
+		border-bottom: 1px solid #fff
+
+	.name
+		color: #fff
+
+
+/* === distrib === */
+.distrib
+	position: relative
+	background: #070023
+	min-height: 800px
+	h3
+		font-family: 'Poppins', sans-serif
+		font-size: 26px
+		font-weight: 500
+		color: #fff
+		margin-bottom: 50px
+
+	.status-bar
+		margin-right: 1%
+		height: 5px
+		background: #fff
+		display: inline-block
+
+	.active
+		background: red
+
+	.status-1
+		width: 49%
+		box-shadow: 0 -1px 4px 0px #f20127
+	.status-1.active
+		width: 0
+	.status-2
+		width: 17%
+	.status-3
+		width: 14%
+	.status-4
+		width: 9%
+	.status-5
+		width: 4%
+
+	.status-1 .status-separator, .status-1 .number, .status-1 h5
+		animation-delay: 0.4s
+	.status-2 .status-separator, .status-2 .number, .status-2 h5
+		animation-delay: 0.6s
+	.status-3 .status-separator, .status-3 .number, .status-3 h5
+		animation-delay: 0.8s
+	.status-4 .status-separator, .status-4 .number, .status-4 h5
+		animation-delay: 1s
+	.status-5 .status-separator, .status-5 .number, .status-5 h5
+		animation-delay: 1.2s
+
+	.loaded .status-1.active
+		width: 49%
+
+.status-text-row
+	.status-1
+		box-shadow: none
+
+.distrib
+	.status
+		display: inline-block
+		margin-right: 1%
+	.status-separator
+		width: 1px
+		height: 27px
+		background: #fff
+		margin-top: 20px
+		margin-bottom: 20px
+
+	.number
+		color: #fff
+		font-size: 18px
+		font-weight: normal
+
+	h5
+		font-family: 'Poppins', sans-serif
+		color: #CDCCD3
+		font-size: 16px
+		font-weight: normal
+		margin: 15px 0 0 0
+
+	.roadmap-header .number
+		color: #07072e
+
+	video
+		margin-top: -240px
+		width: 100%
+
+.second-distrib
+	margin: 130px 0 0 0
+
+	.status-1
+		width: 41%
+	.status-2
+		width: 19%
+	.status-3
+		width: 19%
+	.status-4
+		width: 13%
+	.status-5
+		width: 3%
+
+.first-distrib
+	min-height: 200px
+
+/* === roadmap === */
+.roadmap-header
+	width: 100%
+	//background: #fff
+	position: relative
+	bottom: 99px
+	padding: 32px 0
+	z-index: 95
+
+.roadmap-bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 50%
+	height: 90px
+	background: #fff
+
+.status
+	width: 100%
+	height: 4.5px
+.status.red
+	border: 1px solid #F20127
+	background: #F20127
+	width: 99%
+.status.black
+	background: #070023
+	border: 1px solid #070023
+
+
+.roadmap
+	padding: 0 0 140px 0
+	margin-top: -100px
+	background: #fff
+	z-index: 95
+	position: relative
+
+	h2
+		font-family: Poppins,sans-serif
+		font-size: 38px
+		font-weight: 500
+		color: #0C0123
+		line-height: 1.4
+		margin: 60px 0 85px 0
+
+
+.month-item
+	h5
+		font-family: 'Poppins', sans-serif
+		font-size: 14px
+		font-weight: 400
+		color: #838091
+		line-height: 1.5
+		max-width: 85%
+	p
+		font-family: 'Poppins', sans-serif
+		font-size: 16px
+		font-weight: 500
+		color: #070023
+		margin: 15px 0 20px 0
+
+	.month-separator
+		width: 1px
+		height: 27px
+		background: #070023
+		margin-top: 20px
+		margin-bottom: 20px
+
+
+/* === team === */
+.team
+	background: #050017
+	padding: 140px 0 240px 0
+	position: relative
+
+	.img-bg
+		position: absolute
+		top: 0
+		left: 0
+
+	h2
+		font-family: Poppins,sans-serif
+		font-size: 38px
+		font-weight: 500
+		color: #fff
+		line-height: 1.4
+		margin: 60px 0 120px 0
+
+	h6
+		font-family: Poppins,sans-serif
+		font-size: 18px
+		color: #fff
+		font-weight: 500
+		line-height: 1.2
+		margin: 84px 0 0 0
+	p
+		font-family: Poppins,sans-serif
+		font-size: 14px
+		color: #fff
+		font-weight: 400
+		line-height: 1.4
+		margin: 20px 0 0 0
+
+.team-item
+	position: relative
+
+	.name
+		font-family: Poppins,sans-serif
+		font-size: 26px
+		color: #fff
+		font-weight: 500
+		line-height: 1.2
+	.job
+		font-family: Poppins,sans-serif
+		font-size: 15px
+		color: #fff
+		font-weight: 400
+		line-height: 1.2
+		margin: 6px 0 0 0
+
+	img
+		width: 100%
+	.info-top
+		position: absolute
+		left: 40px
+		z-index: 99
+		transition: 0.3s
+		opacity: 1
+		top: 80%
+
+
+	.info-bottom
+		transition: 0.3s
+		opacity: 0
+		position: absolute
+		bottom: 40px
+		left: 40px
+		z-index: 100
+		p
+			display: block
+			font-size: 14px
+			font-weight: 400
+			line-height: 1.7
+		.social
+			display: block
+			margin: 60px 0 0 0
+			a
+				display: inline-block
+				width: 17.8px
+				height: 17.8px
+				margin-right: 5px
+				cursor: pointer
+				&:hover
+					cursor: pointer
+
+			svg
+				fill: #fff
+
+.team-item
+	.hover-back
+		transition: 0.3s
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.team-item:hover
+	.hover-back
+		background: rgba(7, 0, 35, 0.62)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 1
+		transition: 0.3s
+	.info-bottom
+		transition: 0.3s
+		ransition-delay: 0.2s
+		opacity: 1
+		position: absolute
+		left: 40px
+		p
+			display: block
+			font-size: 14px
+			font-weight: 400
+			line-height: 1.7
+		.social
+			display: block
+
+	.info-top
+		opacity: 0
+		transition: 0.2s
+
+.team-item .info-bottom .job
+	margin-bottom: 50px
+
+/* === partners == */
+.partners
+	background: #050017
+	position: relative
+	h2
+		font-family: Poppins,sans-serif
+		font-size: 38px
+		line-height: 1.2
+		font-weight: 500
+		color: #070023
+		margin: 45px 0 0 0
+	.partners-img
+		margin: 60px 0
+		max-width: 180px
+
+	.img-row
+		margin: 60px -15px 0 -15px
+
+.partners-bg
+	position: absolute
+	top: 0
+	right: 0
+	width: 10%
+	height: 100%
+	background: #050017
+
+.partner-container
+	background: #fff
+	padding-top: 150px
+	padding-bottom: 110px
+
+.partners-left-bg
+	background: #fff
+	position: absolute
+	width: 50%
+	height: 100%
+	left: 0
+	top: 0
+
+/* === faq === */
+.faq
+	background: #050017
+	padding: 125px 0 185px 0
+	position: relative
+
+	h6
+		font-size: 18px
+		font-weight: 500
+		color: #fff
+		margin: 28px 0 0 0
+
+	.img-bg
+		position: absolute
+		top: 0
+		left: 0
+		background: url(../img/footer/newdots.png) bottom center no-repeat
+		width: 100%
+		height: 100%
+
+	hr
+		width: 100%
+		border-color: #838091
+
+	h2
+		font-family: Poppins,sans-serif
+		font-size: 38px
+		line-height: 1.4
+		font-weight: 500
+		color: #fff
+		margin-bottom: 60px
+
+	.pagination-block
+		margin-bottom: 65px
+
+	.panel-faq h6
+		font-family: Poppins,sans-serif
+		font-size: 16px
+		font-weight: normal
+		color: #fff
+	.panel-faq p
+		font-family: Poppins,sans-serif
+		font-size: 14px
+		font-weight: normal
+		line-height: 1.4
+		color: #CDCCD3
+		margin: 15px 0 45px 0
+
+.tab-faq
+	display: inline-block
+	padding: .5em
+	vertical-align: top
+	cursor: pointer
+	text-decoration: none
+	color: #838091
+	font-family: 'Poppins', sans-serif
+	font-size: 16px
+	font-weight: 500
+	padding: 0.1em 0
+
+
+.tabs-faq
+	padding-top: 24px
+	a
+		margin: 0 50px 0 0
+
+.tab-faq:hover
+	color: #838091
+
+.tab-faq.active
+	color: #fff
+	cursor: default
+	padding-left: 0
+
+.panel-faq
+	display: none
+	margin: 30px 0 0 0
+
+.panel-faq.active
+	display: block
+
+.pre-footer-wrapper
+	background: #070023
+	hr
+		margin: 0
+
+.pre-footer
+	padding: 125px 0 125px 0
+	margin: 0 -15px
+
+	h3
+		font-size: 20px
+		font-weight: normal
+		color: #fff
+		line-height: 1.4
+		margin: 30px 0 20px 0
+
+	.contact
+		font-size: 18px
+		font-weight: normal
+		color: #fff
+		margin: 54px 0 0 0
+	.phone
+		font-size: 14px
+		font-weight: normal
+		color: #fff
+		display: block
+		margin: 38px 0 0 0
+	.email
+		font-size: 14px
+		font-weight: normal
+		color: #fff
+		display: block
+		margin: 14px 0 0 0
+
+	.subscribe
+		font-size: 18px
+		font-weight: normal
+		color: #fff
+		margin: 54px 0 0 0
+
+	.subscribe-text
+		font-size: 14px
+		font-weight: normal
+		line-height: 1.6
+		color: #fff
+		margin: 38px 0 0 0
+
+.copyright, .author
+	font-size: 14px
+	font-weight: normal
+	color: #838091
+
+.pre-footer-wrapper a.footer
+	font-size: 14px
+	font-weight: normal
+	color: #838091
+
+.footer-wrapper
+	padding: 26px 0 38px 0
+
+.socials
+	margin: 20px 0
+
+.socials a
+	margin: 0 3px
+
+	&:first-child
+		margin-left: 0
+
+.subscribe-form
+	margin: 60px 0 0 0
+	position: relative
+
+.pre-footer
+	.socials
+	svg
+		fill: #fff
+		opacity: 0.5
+		width: 22px
+		height: 22px
+		+transition(0.3s)
+
+		&:hover
+			opacity: 1
+			+transition(0.3s)
+
+	.form-group
+		display: inline-block
+
+	input
+		background: transparent
+		border: none
+		border-bottom: 1px solid #CDCCD3
+		padding-bottom: 15px
+		display: inline-block
+		position: absolute
+		bottom: 0
+		width: 70%
+
+	button
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 2px solid #F20127
+		border-radius: 50%
+		background: transparent
+		width: 51px
+		height: 51px
+		display: inline-block
+		position: absolute
+		right: 0
+		bottom: 0
+		cursor: pointer
+		box-shadow: 0 0 13px 0 #f20127
+		+transition(0.3s)
+
+		.footer-arrow
+			fill: #fff
+			opacity: 1
+			+transition(0.3s)
+
+		&:hover
+			box-shadow: 0 0 13px 0 #f20127
+			border: 2px solid #f20127
+			background: #f20127
+			+transition(0.3s)
+
+		img
+			display: block
+			margin: 0 auto
+			max-width: 20px
+
+	.subscribe-form svg
+		opacity: 1
+		position: relative
+		top: 2px
+
+.pre-footer	button:hover .footer-arrow
+	fill: #fff
+	+transition(0.3s)
+
+.footer-wrapper .left
+	float: left
+
+.footer-wrapper .right
+	float: right
+
+.footer-form
+	margin: 40px 0 0 0
+
+	.nectar-button
+		margin: 50px 0 0 0
+		padding: 13px 58px
+
+	input
+		background: transparent
+		border: none
+		border-bottom: 1px solid #CDCCD3
+		width: 100%
+		padding-bottom: 15px
+		margin-bottom: 30px
+		font-size: 14px
+		font-weight: 400
+		color: #CDCCD3
+		font-family: 'Poppins', sans-serif
+		display: block
+
+	textarea
+		background: transparent
+		border: none
+		border-bottom: 1px solid #CDCCD3
+		width: 100%
+		font-size: 14px
+		font-weight: 400
+		color: #CDCCD3
+		font-family: 'Poppins', sans-serif
+		display: block
+
+	.nectar-button
+		margin: 65px 0 0 0
+
+
+.hidden
+	display: none
+
+.fixed-menu
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 110
+	background: #020016
+
+.header-left .underlineEffect a:after
+	background-color: #fff
+
+.header-left span a
+	color: #fff
+
+.underlineEffect a:after
+	display: block
+	content: ''
+	position: absolute
+	z-index: -1
+	width: 100%
+	height: 1px
+	background-color: #838091
+	bottom: -3px
+	left: 0
+	backface-visibility: hidden
+	pointer-events: none
+	animation: portSliderLine2 0.42s cubic-bezier(0.42, 0, 0, 1) forwards
+
+.underlineEffect a:hover:after
+	animation: portSliderLine 0.42s cubic-bezier(0.42, 0, 0, 1) forwards
+
+
+.underlineEffect a
+	-webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s, all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	-webkit-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+	display: inline-block
+	opacity: 1
+
+.underlineEffect a:hover:after
+	animation: portSliderLine 0.42s cubic-bezier(0.42, 0, 0, 1) forwards;
+
+@keyframes portSliderLine
+	0%
+		transform: scaleX(0)
+		transform-origin: left
+	100%
+		transform: scaleX(1)
+		transform-origin: left
+
+
+@keyframes portSliderLine2
+	0%
+		transform: scaleX(1)
+		transform-origin: right
+	100%
+		transform: scaleX(0)
+		transform-origin: right
+
+input::-webkit-input-placeholder
+    color:    #fff
+
+input:-moz-placeholder
+	color:    #fff
+
+input::-moz-placeholder
+	color:    #fff
+
+input:-ms-input-placeholder
+	color:    #fff
+
+input::-ms-input-placeholder
+	color:    #fff
+
+input::placeholder
+	color:    #fff
+
+
+.footer-form
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+		color: #cdccd3
+
+	input:-moz-placeholder, textarea:-moz-placeholder
+		color: #cdccd3
+
+	input::-moz-placeholder, textarea::-moz-placeholder
+		color: #cdccd3
+
+	input:-ms-input-placeholder, textarea:-ms-input-placeholder
+		color: #cdccd3
+
+	input::-ms-input-placeholder, textarea::-ms-input-placeholder
+		color: #cdccd3
+
+	input::placeholder, textarea::placeholder
+		color: #cdccd3
+
+
+.subscribe-form input
+	color: #cdccd3
+	font-size: 14px
+	font-family: 'Poppins', sans-serif
+	font-weight: 400
+
+.subscribe-form
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+		color: #cdccd3
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+
+	input:-moz-placeholder, textarea:-moz-placeholder
+		color: #cdccd3
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+
+	input::-moz-placeholder, textarea::-moz-placeholder
+		color: #cdccd3
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+
+	input:-ms-input-placeholder, textarea:-ms-input-placeholder
+		color: #cdccd3
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+
+	input::-ms-input-placeholder, textarea::-ms-input-placeholder
+		color: #cdccd3
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+
+	input::placeholder, textarea::placeholder
+		color: #cdccd3
+		font-size: 14px
+		font-family: 'Poppins', sans-serif
+		font-weight: 400
+
+// graph animations
+.line-animation
+	width: 0
+
+.line-animation.loaded
+	width: 100%
+	transition-delay: .5s
+	transition-timing-function: ease-in-out
+	transition-property: width
+	transition-duration: 2s
+
+
+
+.pre-footer svg.goggle-icon
+	width: 25px
+.header svg.goggle-icon
+	width: 25px
+
+
+// tabs animation
+.tabs a:after, .tabs-sale a:after, .tabs-faq a:after
+	display: block
+	content: ''
+	position: absolute
+	z-index: -1
+	width: 100%
+	height: 1px
+	background-color: #838091
+	bottom: -3px
+	left: 0
+	backface-visibility: hidden
+	pointer-events: none
+	animation: portSliderLine2 0.42s cubic-bezier(0.42, 0, 0, 1) forwards
+
+.tabs a:hover:after, .tabs-sale a:hover:after, .tabs-faq a:hover:after
+	animation: portSliderLine 0.42s cubic-bezier(0.42, 0, 0, 1) forwards
+
+
+.tabs a, .tabs-sale a, .tabs-faq a
+	-webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s, all 0.5s cubic-bezier(0.4, 0, 0.1, 1) 0.75s
+	-webkit-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+	display: inline-block
+	opacity: 1
+
+.tabs a:hover:after, .tabs-sale a:hover:after, .tabs-faq a:hover:after
+	animation: portSliderLine 0.42s cubic-bezier(0.42, 0, 0, 1) forwards
+
+.tabs a.active:after, .tabs-sale a.active:after, .tabs-faq a.active:after
+	background-color: #fff
+	animation: none
+
+@keyframes portSliderLine
+	0%
+		transform: scaleX(0)
+		transform-origin: left
+	100%
+		transform: scaleX(1)
+		transform-origin: left
+
+
+@keyframes portSliderLine2
+	0%
+		transform: scaleX(1)
+		transform-origin: right
+	100%
+		transform: scaleX(0)
+		transform-origin: right
+
+// menu
+.menu-toogle
+	width: 44px
+	height: 44px
+	background: #fff
+	border-radius: 50%
+	position: relative
+	top: -12px
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+
+.burgx,.burgx2,.burgx3
+	margin-top: 4px
+	background: #000
+	width: 16px
+	height: 1px
+	position: absolute
+	-webkit-transform: rotate(-180deg)
+	transform: rotate(-180deg)
+	-moz-transform: rotate(-180deg)
+	-o-transform: rotate(-180deg)
+
+.burgx2
+	margin-top: 0px
+
+.burgx3
+	margin-top: -4px
+	-webkit-transform: rotate(180deg)
+	transform: rotate(180deg)
+	-moz-transform: rotate(180deg)
+	-o-transform: rotate(180deg)
+
+.menu-toogle-wrapper
+	position: absolute
+	top: 0
+	right: 15px
+
+.menu-toogle.toggled .burgx, .menu-toogle.toggled .burgx2, .menu-toogle.toggled .burgx3
+	margin-top: 0
+
+.mobile-menu-container
+	position: fixed
+	z-index: 980
+	background: #050017
+	width: 100vw
+	top: 0
+	right: 0
+	padding: 20% 5% 20% 5%
+	transition: all 1s ease
+	margin-right: 0
+	opacity: 1
+
+.mobile-menu-container.hidden
+	transition: all 1s ease
+	margin-right: -200px
+	opacity: 0
+
+.mobile-menu-container ul
+	list-style: none
+
+	a
+		font-family: 'Poppins', sans-serif
+		color: #fff
+		font-size: 1rem
+		font-weight: 400
+		display: inline-block
+		margin: 7px 0
+
+.mobile-menu-container
+	.pagination-block
+		margin-top: 100px
+		padding-left: 40px
+		a
+			color: #fff
+			font-weight: 300
+			font-size: 0.8rem
+	.underlineEffect a:after
+		background-color: #fff
+
+
+#error-message
+	color: #c10808
+	padding-top: 10px
+
+#success-message
+	color: #fff
+	padding-top: 10px
+
+.subscribe-form button:focus, .footer-form button:focus
+	outline: none
+
+.bar
+	padding-top: 10px
+	p
+		color: #fff
+		padding: 0
+		margin: 0
+
+@import "media" // Always at the end
+

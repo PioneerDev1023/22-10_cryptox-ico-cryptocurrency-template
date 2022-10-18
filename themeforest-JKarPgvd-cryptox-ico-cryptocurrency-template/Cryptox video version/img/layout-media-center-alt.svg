@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14.993">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f20127;
+      }
+    </style>
+  </defs>
+  <path id="layout-media-center-alt" class="cls-1" d="M1,13H16v1H1Zm3,2.993h9v-1H4ZM17,1V12H0V1ZM16,2H1v9H16Z" transform="translate(0 -1)"/>
+</svg>

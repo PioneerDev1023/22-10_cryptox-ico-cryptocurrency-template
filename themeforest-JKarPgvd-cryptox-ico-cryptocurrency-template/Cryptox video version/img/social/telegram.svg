@@ -1,0 +1,16 @@
+<svg id="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.877 15.833">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #070023;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Path_37" data-name="Path 37" class="cls-1" d="M8.4,17.114c-.562,0-.467-.213-.66-.747L6.086,10.922,18.815,3.37" transform="translate(-1.301 -2.24)"/>
+  <path id="Path_38" data-name="Path 38" class="cls-2" d="M9.028,19.638A1.114,1.114,0,0,0,9.9,19.2l2.314-2.248L9.323,15.213" transform="translate(-1.928 -4.764)"/>
+  <path id="Path_39" data-name="Path 39" class="cls-2" d="M7.4,12.382l6.995,5.168c.8.441,1.375.213,1.574-.741L18.817,3.391c.293-1.17-.444-1.7-1.207-1.353L.886,8.487c-1.141.458-1.135,1.1-.208,1.379L4.971,11.2,14.9,4.939c.468-.283.9-.131.546.183" transform="translate(-0.005 -1.934)"/>
+</svg>

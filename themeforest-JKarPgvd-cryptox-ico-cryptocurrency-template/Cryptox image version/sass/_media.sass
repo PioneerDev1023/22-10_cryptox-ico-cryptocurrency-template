@@ -1,0 +1,705 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+@media screen and (min-width: 1400px)
+  .container
+    max-width: 1380px
+  .partner-container
+    max-width: -webkit-calc(1380px - 30px)
+  .mobile-menu
+    display: none
+
+@media screen and (max-width: 1400px)
+  .main video
+    width: initial
+    height: 100%
+  .bottom-panel .icon-wrapper
+    width: 570px
+  .tabs a
+    margin: 0 20px
+  .tabs a:first-child
+    margin: 0 20px 0 0
+  .tabs-sale a
+    margin: 0 55px 0 0
+  .tabs-sale a:last-child
+    margin-right: 0
+  .second-distrib
+    position: relative
+    z-index: 100
+  .second-distrib .status-1
+    width: 49%
+  .team-item .info-bottom
+    right: 25px
+  .partners
+    background: transparent
+  .pre-footer svg
+    width: 16px
+    height: 16px
+  .header .socials svg
+    width: 16px
+    height: 16px
+  .info-block-right img
+    width: 100%
+  .info-block-left h3
+    margin: 40px 0 30px 0
+  .mobile-menu
+    display: none
+
+@media screen and (max-width: 1200px)
+  .header h1
+    font-size: 2rem
+  .header h2
+    font-size: 1rem
+  .ico-info
+    width: 100%
+  .ico-info h2
+    font-size: 14px
+  .timer .days, .timer .hours, .timer .minutes, .timer .seconds
+    font-size: 28px
+  .timer .smalltext
+    font-size: 10px
+  .ico-data .number
+    font-size: 16px
+  .ico-data .text
+    font-size: 10px
+  .ico-data .nectar-button span
+    font-size: 12px
+  .payment .payment-meth span
+    font-size: 10px
+  .info-block-left h3
+    font-size: 1.8rem
+  .info-block-left p
+    font-size: 12px
+  .stats .item-name
+    font-size: 12px
+  .stats .item-text
+    font-size: 14px
+  .info-right .learn-more
+    padding: 35px 0 0 0
+  .presentation
+    margin-top: 40px
+  .info-block-right
+    padding: 4% 0
+  .info-right .learn-more
+    font-size: 12px
+  .presentation a
+    font-size: 14px
+  .info-right .learn-more svg
+    font-size: 12px
+  .benefit h2
+    font-size: 1.8rem
+  .tabs a, .tabs-faq a, .tabs-sale a
+    font-size: 14px
+  .benefit-row
+    margin-top: 45px
+  .tabs
+    margin-top: 60px
+  .panel h5
+    font-size: 14px
+  .panel p
+    font-size: 12px
+    line-height: 1.4
+    width: 100%
+  .sale-row h2
+    font-size: 1.8rem
+  .illustration-img
+    display: none
+  .tabs-sale
+    padding: 6% 0 0 0
+  .panel-sale
+    margin: 60px 0 0 0
+  .distrib h3
+    font-size: 22px
+  .distrib .number
+    font-size: 14px
+  .distrib h5
+    font-size: 14px
+  .pagination-block .name
+    font-size: 14px
+  .roadmap
+    margin-top: -90px
+  .roadmap h2
+    font-size: 1.8rem
+  .month-item h5
+    font-size: 12px
+  .month-item p
+    font-size: 14px
+  .team h2
+    font-size: 1.8rem
+  .team h6
+    font-size: 14px
+  .team p
+    font-size: 12px
+  .team-item .name
+    font-size: 22px
+  .team-item .info-bottom .job
+    font-size: 14px
+  .team-item:hover .info-bottom p
+    font-size: 12px
+  .team-item .info-bottom .job
+    margin-bottom: 30px
+  .team-item .info-bottom .social
+    margin: 30px 0 0 0
+  .partners h2
+    font-size: 1.8rem
+  .partners .partners-img
+    max-width: 140px
+  .faq h2
+    font-size: 1.8rem
+  .faq h6
+    font-size: 16px
+  .faq .panel-faq p
+    font-size: 12px
+  .nectar-button span
+    font-size: 12px
+  .pre-footer h3
+    font-size: 16px
+  .pre-footer .contact
+    font-size: 16px
+  .pre-footer .phone
+    font-size: 12px
+  .pre-footer .email
+    font-size: 12px
+  .pre-footer .subscribe
+    font-size: 16px
+  .pre-footer .subscribe-text
+    font-size: 12px
+  .author, .copyright
+    font-size: 12px
+  .pre-footer-wrapper a.footer
+    font-size: 12px
+
+  .bottom-panel .icon-wrapper
+    padding: 20px 0 20px 30px
+  .pc-menu
+    display: none
+  .mobile-menu
+    display: block
+    position: relative
+  .distrib video
+    margin-top: 0
+  .team .img-bg
+    width: 100%
+  .main video
+    width: 100%
+  .info-block-right img
+    width: initial
+    max-width: 100%
+  .main video
+    width: initial
+    height: 100%
+    max-width: initial
+  .menu-toogle
+    width: 35px
+    height: 35px
+    top: -7px
+  #menu 
+    position: fixed
+    z-index: 990
+    width: 100%
+    background: #020016
+
+// tablets
+@media screen and (max-width: 1024px)
+  .main
+    height: 170vh
+  .header h1
+    font-size: 1.8rem
+  .timer, .ico-data, .payment
+    width: 85%
+    margin: 0 auto
+  .ico-info hr
+    width: 85%
+  .platform-header
+    display: none
+  .info-block-right
+    width: 100%
+    float: none
+  .info-block-left
+    width: 100%
+    float: none
+  .info-block-left p
+    width: 100%
+  .info-block-left
+    padding-bottom: 80px
+  .month-item h5
+    font-size: 10px
+  .month-item p
+    font-size: 12px
+  .team h2
+    font-size: 1.6rem
+  .distrib video
+    margin-top: -132px
+  .partners .partners-img
+    max-width: 120px
+  .big-order
+    order: 4
+  .small-order
+    order: 1
+  .roadmap
+    margin-top: 0
+  .roadmap-header
+    position: absolute
+    bottom: 0
+  .distrib video
+    margin-top: 5px
+  .header .community
+    margin: 50px 0 0 0
+  .ico-info
+    margin-top: 40px
+  .main
+    height: 150vh
+  .info-block-left
+    padding-bottom: 60px
+  .panel .row
+    padding-bottom: 0
+  .team
+    padding: 140px 0 180px 0
+  .tabs-faq
+    padding-top: 0
+    padding-bottom: 30px
+  .faq
+    padding: 125px 0 150px 0
+  .info-right
+    display: flex
+    flex-flow: column
+  .info-right .info-block-right
+    order: 4
+  .info-right .big-order
+    order: 2
+  .header
+    position: relative
+    transform: none
+    top: 0
+    left: 0
+    padding-bottom: 50px
+  .main
+    height: 100%
+  .team .img-bg
+    width: 100%
+  .benefit
+    padding-top: 100px
+  .main video
+    width: 100%
+    max-width: 100%
+    height: initial
+  .pre-footer input
+    border-radius: 0
+  .footer-form input, .footer-form textarea
+    border-radius: 0
+  .main .menu
+    padding: 20px 0
+  #menu img
+    width: 120px
+  .menu-toogle
+    width: 35px
+    height: 35px
+    top: -7px
+
+  #menu
+    position: fixed
+    z-index: 990
+    width: 100%
+    background: #020016
+  .header .pagination-block
+    margin-top: 100px
+  .main video
+    width: initial
+    height: 100%
+    max-width: initial
+  .ico-info
+    position: relative
+    z-index: 999
+  .main
+    overflow: hidden
+
+@media screen and (max-width: 768px)
+  .header h1
+    font-size: 1rem
+  .team h2
+    font-size: 24px
+  .team h6
+    margin: 68px 0 0 0
+  .team-item .name
+    font-size: 14px
+  .team-item .job
+    font-size: 10px
+  .info-bottom .name
+    font-size: 12px
+  .team-item .info-bottom .job
+    font-size: 10px
+  .team-item .info-bottom
+    bottom: 10px
+    width: 100%
+    right: 10px
+  .team-item .info-bottom p
+    font-size: 10px
+    line-height: 1.4
+    width: 85%
+  .team-item .info-top, .team-item:hover .info-top
+    left: 20px
+  .team-item .info-bottom, .team-item:hover .info-bottom
+    left: 20px
+  .team-item:hover .info-bottom p
+    font-size: 10px
+  .partners .partners-img
+    max-width: 85px
+  .pre-footer h3
+    font-size: 14px
+  .pre-footer .contact
+    font-size: 12px
+  .pre-footer .subscribe-text
+    font-size: 10px
+  .subscribe-form input
+    font-size: 12px
+  .pre-footer-wrapper a.footer
+    font-size: 10px
+  .author, .copyright
+    font-size: 10px
+  .info-block-left h3
+    font-size: 24px
+  .benefit h2
+    font-size: 24px
+  .sale-row h2
+    font-size: 24px
+  .sale-item .name
+    font-size: 14px
+  .sale-item .content
+    font-size: 12px
+  .distrib h3
+    font-size: 18px
+  .distrib h5
+    font-size: 10px
+  .roadmap h2
+    font-size: 24px
+  .month-item h5
+    font-size: 8px
+  .partners h2
+    font-size: 24px
+  .faq h2
+    font-size: 24px
+  .faq .panel-faq h6
+    font-size: 14px
+  .faq .panel-faq p
+    font-size: 10px
+  .faq h6
+    font-size: 14px
+  .distrib
+    min-height: 700px
+  .mobile-menu-container
+    width: 100%
+  .ico-info
+    margin-top: 60px
+  .header
+    background: #050017
+  .header-left
+    z-index: 500
+    position: relative
+  .main video
+    z-index: 99
+  .benefit-space
+    padding-bottom: 70px
+  .panel p
+    margin: 30px 0 0 0
+  .sale
+    padding: 98px 0 205px 0
+  .benefit
+    padding-bottom: 55px
+  .sale-row
+    margin-top: 50px
+  .tabs-sale
+    padding: 55px 0 0 0
+  .panel-sale
+    margin: 40px 0 0 0
+  .sale-item
+    margin: 25px 0 10px 0
+  .sale-item .content
+    margin: 10px 0 0 0
+  .sale
+    padding: 98px 0 115px 0
+  .sale .nectar-button
+    margin: 80px 0 0 0
+  .second-distrib
+    margin: 85px 0 0 0
+  .roadmap
+    padding: 0 0 115px 0
+  .team
+    padding: 130px 0 140px 0
+  .team h2
+    margin: 70px 0 120px 0
+  .partner-container
+    padding-top: 75px
+    padding-bottom: 70px
+  .partners .img-row
+    margin: 20px -15px 0 -15px
+  .faq .pagination-block
+    margin-bottom: 75px
+  .faq h2
+    margin-bottom: 75px
+  .faq
+    padding: 125px 0 130px 0
+  .pre-footer
+    padding: 130px 0 125px 0
+  .nectar-button span
+    font-size: 14px
+  .faq h6
+    font-size: 20px
+  .stats .item-name
+    font-size: 14px
+    margin-top: 15px
+  .stats .item-text
+    font-size: 16px
+    margin-top: 15px
+  .ico-info
+    padding: 55px 25px 20px 25px
+  .header .pagination-block .name, .header .pagination-block .number
+    font-size: 12px
+  .header h1
+    font-size: 26px
+  .header h2
+    font-size: 15px
+  .main video
+    width: initial
+    height: 100%
+    max-width: initial
+  .ico-info
+    position: relative
+    z-index: 999
+  .main
+    overflow: hidden
+
+// phones
+@media screen and (max-width: 576px)
+  .info-right .info-block-right
+    padding-top: 80px
+  .benefit-row
+    margin-bottom: 70px
+  .tabs
+    margin-top: 30px
+  .benefit
+    padding-bottom: 0
+  .sale-row
+    margin-top: 35px
+  .team p
+    margin: 30px 0 0 0
+  .month-item p
+    margin: 20px 0 10px 0
+  .month-item h5
+    margin: 0
+  .roadmap-header
+    padding: 70px 0 35px 0
+  .distrib video
+    display: none
+  .distrib
+    min-height: 880px
+  .flex
+    display: block
+    max-width: 100%
+    flex: initial
+  .distrib .status
+    margin: 0
+    width: 50%
+    float: left
+    height: initial
+    margin-top: 25px
+    position: relative
+    min-height: 60px
+  .distrib .status-separator
+    display: none
+  .distrib h5
+    margin: 5px 0 0 0
+  .distrib h3
+    margin-bottom: 10px
+  .distrib .status:before
+    content: ''
+    display: inline-block
+    width: 5px
+    height: 5px
+    background: red
+    border-radius: 50%
+    position: absolute
+    top: 8px
+  .hidden-mob
+    display: none
+  .month-item .month-separator
+    display: none
+  .roadmap .col-2
+    width: 100%
+    max-width: 100%
+    flex: 0 0 100%
+  .space-left
+    padding-left: 15px
+  .roadmap .offset-1
+    margin-left: 0
+  .team h2
+    margin: 30px 0
+  .team h6
+    margin: 0
+  .distrib .number
+    margin-left: 15px
+  .distrib h5
+    margin-left: 15px
+  .team p
+    margin-bottom: 1.5rem
+  .footer-wrapper .left
+    float: none
+  .footer-wrapper .right
+    float: none
+  .pre-footer-wrapper a.footer
+    display: block
+  .underlineEffect a:after
+    display: none
+  .copyright, .author, .pre-footer-wrapper a.footer
+    padding: 0.5rem 0
+  .tabs-faq a
+    margin: 0 20px 0 0
+  .roadmap-header
+    background: #fff
+  .tabs-sale a
+    margin: 0 15px 0 0
+    font-size: 12px
+  .tabs a, .tabs-faq a, .tabs-sale a
+    font-size: 12px
+  .tabs a:last-child
+    margin-right: 0
+  .month-item
+    display: flex
+    flex-flow: column
+    padding-left: 15px
+  .month-item h5
+    order: 4
+  .month-item p
+    order: 2
+  .roadmap .month-item
+    border-left: 3px solid red
+  .roadmap .month-item.month-black
+    border-left: 3px solid #000
+  .info-right
+    display: flex
+    flex-flow: column
+  .info-right .info-block-right
+    order: 4
+  .info-right .big-order
+    order: 2
+  .team .img-bg
+    width: 100%
+  .main
+    background: #050017
+  .benefit-space
+    padding-bottom: 30px
+  .bonus-percent
+    font-size: 14px
+  .bonus-day
+    font-size: 12px
+  .circle
+    width: 12px
+    height: 12px
+  .sale
+    padding: 100px 0 90px 0
+  .panel-sale
+    margin: 0
+  .second-distrib
+    margin: 85px 0 0 0
+  .roadmap h2
+    margin: 30px 0 45px 0
+  .team
+    padding: 100px 0 180px 0
+  .partner-container
+    padding-top: 75px
+    padding-bottom: 70px
+  .partners .partners-img
+    margin: 40px 0
+  .faq
+    padding: 100px 0
+  .pre-footer .phone
+    margin: 20px 0 0 0
+  .pre-footer .email
+    margin: 10px 0 0 0
+  .pre-footer .subscribe-text
+    margin: 14px 0 0 0
+  .right-footer-links
+    margin: 25px 0 0 0
+  .nectar-button
+    padding: 10px 25px
+  .tabs a:first-child
+    margin: 0 5px 0 0
+  .tabs a
+    margin: 0 5px
+  .distrib .pagination-block .number
+    margin-left: 0
+  .pre-footer
+    padding: 75px 0 125px 0
+  .team
+    padding: 100px 0
+  .roadmap
+    padding: 0 0 70px 0
+  .main .menu
+    padding: 15px 0
+  .menu-toogle
+    width: 35px
+    height: 35px
+    top: -7px
+  #menu img
+    width: 100px
+  .benefit
+    padding-top: 60px
+  .header
+    position: relative
+    transform: none
+    top: 0
+    left: 0
+    padding-bottom: 50px
+  .main
+    height: 100%
+  .team .img-bg
+    display: none
+  .team-item .info-bottom
+    right: 0
+  .team-item .info-bottom, .team-item:hover .info-bottom
+    left: 0
+    padding-left: 15px
+  .roadmap .col-2:before
+    width: 5px
+    height: 5px
+    content: ''
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    background: red
+    -webkit-border-radius: 50%
+    border-radius: 50%
+    position: absolute
+    top: 24px
+    margin-left: -1px
+  .roadmap .month-row .col-2:before
+    width: 5px
+    height: 5px
+    content: ''
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    background: #000
+    -webkit-border-radius: 50%
+    border-radius: 50%
+    position: absolute
+    top: 24px
+    margin-left: -1px
+  .header .socials
+    width: 60%
+    a
+      margin-bottom: 10px
+      display: inline-block
+
+@media screen and (max-width: 400px)
+  .benefit .tabs a, .tabs-sale a
+    margin-bottom: 10px
+    display: inline-block
+
+// landscape orientation
+@media screen and (max-width: 1024px) and (orientation: landscape)
+  .mobile-menu-container
+    top: -80px
+  .mobile-menu-container .pagination-block
+    margin-top: 40px

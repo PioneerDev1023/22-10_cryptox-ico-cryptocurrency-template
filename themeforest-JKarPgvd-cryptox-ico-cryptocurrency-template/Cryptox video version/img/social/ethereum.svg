@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.677 18.884">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="ethereum" class="cls-1" d="M10.374,14.139,4.58,10.717l5.793,8.167,5.8-8.167-5.8,3.423ZM10.462,0l-5.8,9.617,5.8,3.426,5.8-3.423Z" transform="translate(-4.58)"/>
+</svg>

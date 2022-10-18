@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.59 30.787">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f20127;
+      }
+    </style>
+  </defs>
+  <path id="stats-down" class="cls-1" d="M12.335,15.321,1.9,5.875,3.5,4.106l9.009,8.149L22.544,5.03,35.9,19.953V14.5h2.388v9.637H28.65V21.746H34.3L22.2,8.22l-9.861,7.1ZM0,32.5v2.388H40.59V32.5Z" transform="translate(0 -4.106)"/>
+</svg>
